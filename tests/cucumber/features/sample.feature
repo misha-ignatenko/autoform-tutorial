@@ -20,8 +20,16 @@ Feature: One-liner description of this feature
   Scenario:
     When I navigate to "/"
     Then I should see the title "intentional failure"
-    Then I should see the header "that paragraph"
-    Then I should see button "Insert"
+    And I should see the header "that paragraph"
+    And I should see button "button with value"
+    And Create and log in using "misha@css.edu" and "mishaa"
+    And Set textarea "Content" to "content1"
+#    And Click on link "to do 3"
+    And Set "Title" to "title1"
+    And Set "Tags" to "tag1,tag2"
+    And Set category "Category" to "Business"
+    And Click on button "Insert"
+    And Check if "title1" links exixts
 
   # This scenario will not run as part of the Meteor dev cycle because it does not have the @dev tag
   Scenario:
