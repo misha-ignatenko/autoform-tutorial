@@ -5,12 +5,13 @@
 
 
     <!--{{> quickForm collection="Posts" id="insertPostForm" type="insert"}}-->
-    {{#autoForm collection="Posts" id="insertPostForm" type="insert"}}
+    {{#autoForm collection="Posts" id="insertPostForm" type="insert" autosave=true}}
         <fieldset>
             {{> afQuickField name='title'}}
             {{> afQuickField name='content' rows=6}}
             {{> afQuickField name='category'}}
             {{> afQuickField name='tags' type='text'}}
+            <!--{{> afQuickField name='datePostCreated' type='date'}}-->
         </fieldset>
         <button type="submit" class="btn btn-primary">Insert</button>
     {{/autoForm}}
