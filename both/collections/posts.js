@@ -43,6 +43,8 @@ Posts.attachSchema(new SimpleSchema({
         type: [Object],
         optional: true,
 
+        //defaultValue: [],
+
         autoValue: function() {
             var title = this.field("title");
             var category = this.field("category");

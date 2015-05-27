@@ -1,0 +1,58 @@
+<template name="fieldHistory">
+
+
+    <!--<h1>fields to display history for:</h1>-->
+
+    <!--{{> quickForm id="demo" collection="Tags" schema=schemaFromJSON type="method" meteormethod="demoSubmission" }}-->
+
+
+    <!--commented out May 27-->
+    <!--{{> quickForm id="fieldsToViewUpdateHistoryFor" collection="Tags" type="insert" }}-->
+
+
+
+    <ul>
+        {{#with historyContext}}
+
+        <!--edited-->
+            <!--{{#each tagSession}}-->
+
+            {{#each updateHistory}}
+
+                <!--{{#each tagSession}}-->
+
+
+                    <!--<li><a data-field="{{fieldName}}">{{tagSession}}</a> - {{tagSession}}</li>-->
+
+
+        <li><a data-field="{{fieldName}}">{{title}}</a> - {{content}} - {{category}} - {{tags}}</li>
+
+
+                <!--{{/each}}-->
+            {{/each}}
+        {{/with}}
+    </ul>
+
+
+
+
+    <table>
+        {{#with historyContext}}
+            {{#each updateHistory}}
+                <tr>
+                    <td><a data-field="{{fieldName}}">{{title}}</a></td>
+                    <td>&#160;&#160;&#160;{{content}}</td>
+                    <td>&#160;&#160;&#160;{{category}}</td>
+                    <td>&#160;&#160;&#160;{{tags}}</td>
+                    <td>&#160;&#160;&#160;{{dateUpdated}}</td>
+                </tr>
+            {{/each}}
+        {{/with}}
+    </table>
+
+
+
+
+
+
+</template>

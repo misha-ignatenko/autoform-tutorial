@@ -5,7 +5,6 @@
 # but you can also edit it by hand.
 
 meteor-platform
-autopublish
 mizzao:bootstrap-3
 msavin:mongol
 aldeed:autoform
@@ -15,3 +14,4 @@ accounts-password
 ian:accounts-ui-bootstrap-3
 xolvio:cucumber
 aldeed:simple-schema
+autopublish
